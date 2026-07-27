@@ -3,179 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全行程總覽</title>
+    <title>賣梁文俊豬仔 行程導覽</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #f4f7f6;
             margin: 0;
-            padding: 15px;
-            color: #333;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             padding: 20px;
-            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+        }
+        .menu-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
         h1 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: #2c3e50;
             margin-top: 0;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
+            margin-bottom: 8px;
         }
-        .time-slot {
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #eee;
-        }
-        .time-slot:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .time {
-            font-weight: bold;
-            color: #e67e22;
-            font-size: 0.95rem;
-            margin-bottom: 3px;
-        }
-        .event {
-            font-size: 0.95rem;
-            color: #34495e;
-            margin-bottom: 4px;
-        }
-        .map-link {
-            display: inline-block;
-            font-size: 0.85rem;
-            color: #2980b9;
-            text-decoration: none;
-            background: #ebf5fb;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-top: 2px;
-        }
-        .map-link:hover {
-            background: #d4e6f1;
-        }
-        .night-market-list {
-            background: #f9f9f9;
-            border-left: 4px solid #e74c3c;
-            padding: 10px 15px;
-            margin-top: 10px;
-            border-radius: 0 8px 8px 0;
-        }
-        .night-market-list ul {
-            margin: 0;
-            padding-left: 20px;
+        .subtitle {
             font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 25px;
         }
-        .night-market-list li {
-            margin-bottom: 4px;
-        }
-        .nav-menu {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
-            padding: 10px 0;
-            margin-bottom: 20px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            z-index: 100;
-        }
-        .nav-menu a {
-            display: inline-block;
-            margin: 0 5px;
-            padding: 5px 10px;
+        .day-btn {
+            display: block;
             background: #3498db;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.85rem;
+            padding: 14px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+            transition: background 0.2s, transform 0.1s;
+        }
+        .day-btn:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+        .day-btn:active {
+            transform: translateY(1px);
         }
     </style>
 </head>
 <body>
 
-    <!-- 快速導航欄 -->
-    <div class="nav-menu">
-        <a href="#day1">Day 1</a>
-        <a href="#day2">Day 2</a>
-        <a href="#day3">Day 3</a>
-        <a href="#day4">Day 4</a>
-        <a href="#day5">Day 5</a>
-    </div>
+    <div class="menu-card">
+        <h1>賣梁文俊豬仔 行程</h1>
+        <div class="subtitle">EEEEat・行程導覽</div>
 
-    <!-- Day 1 -->
-    <div id="day1" class="card">
-        <h1>賣梁文俊豬仔 Day 1 (7/29・三)<br><small style="font-size: 0.85rem; font-weight: normal; color: #7f8c8d;">抵達台北 ── 站前燃麵 ＋ 下午茶 ＋ 寧夏夜市攻略</small></h1>
-        <div class="time-slot"><div class="time">08:10 - 10:00</div><div class="event">✈️ 抵達台北機場，轉車至台北車站。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=台北車站" target="_blank">🗺️ 台北車站地圖</a></div>
-        <div class="time-slot"><div class="time">10:00 - 11:30</div><div class="event">🧳 【日野苑】寄放行李，北車/相機街周邊散步。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日野苑" target="_blank">🗺️ 日野苑地圖</a></div>
-        <div class="time-slot"><div class="time">11:30 - 12:30</div><div class="event">🍜 【午餐】墨竹亭 燃麵本家（北車站前店）。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=墨竹亭燃麵本家北車站前店" target="_blank">🗺️ 墨竹亭 燃麵本家地圖</a></div>
-        <div class="time-slot"><div class="time">12:30 - 14:30</div><div class="event">🚶‍♂️ 北車地下街/附近漫步避暑。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=台北車站地下街" target="_blank">🗺️ 北車地下街地圖</a></div>
-        <div class="time-slot"><div class="time">14:30 - 17:00</div><div class="event">🛍️ 【行下】西門町。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=西門町" target="_blank">🗺️ 西門町地圖</a></div>
-        <div class="time-slot"><div class="time">17:00 - 17:30</div><div class="event">🏨 回【日野苑】正式 Check-in 休息。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日野苑" target="_blank">🗺️ 日野苑地圖</a></div>
-        <div class="time-slot">
-            <div class="time">17:30 - 20:00</div>
-            <div class="event">🍢 【晚餐】寧夏夜市（方家雞肉飯、圓環邊蚵仔煎、劉芋仔）+ 豆花莊。</div>
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=三元號魯肉飯" target="_blank">🗺️ 寧夏夜市地圖</a>
-            <div class="night-market-list">
-                <strong>💡 寧夏夜市必食推薦：</strong>
-                <ul>
-                    <li>三元號魯肉飯（魯肉飯、魚翅肉羹）</li>
-                    <li>劉芋仔蛋黃芋餅（蛋黃芋餅、香酥芋丸）</li>
-                    <li>方家雞肉飯（雞肉飯、蔥油雞）</li>
-                    <li>爆漿脆皮魷魚</li>
-                    <li>豬肝榮仔（豬肝湯、肉粽）</li>
-                    <li>魏祥記・麻糬冰</li>
-                    <li>圓環邊蚵仔煎（蚵仔煎、煎豬肝）</li>
-                    <li>豆花莊（花生豆花、黑糖豆花）</li>
-                </ul>
-            </div>
-        </div>
-        <div class="time-slot" style="margin-top: 15px;"><div class="time">21:00 之後</div><div class="event">🍸 【微醺】無向 Bar Without (已book)。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=無向BarWithout" target="_blank">🗺️ 無向 Bar Without 地圖</a></div>
-    </div>
-
-    <!-- Day 2 -->
-    <div id="day2" class="card">
-        <h1>賣梁文俊豬仔 Day 2 (7/30・四)<br><small style="font-size: 0.85rem; font-weight: normal; color: #7f8c8d;">全日集中玩 ── 中山站 / 赤峰街商圈</small></h1>
-        <div class="time-slot"><div class="time">11:30 - 13:00</div><div class="event">🍽️ 【午餐】定置漁場三代目 / waku waku pasta</div><a class="map-link" href="https://maps.app.goo.gl/Kze6Cx1VBgs8satTA" target="_blank">🗺️ 定置漁場三代目地圖</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=wakuwakupta" target="_blank">🗺️ waku waku pasta地圖</a></div>
-        <div class="time-slot"><div class="time">13:00 - 14:30</div><div class="event">🛍️ 【行街】赤峰街選物店 ＋ 誠品南西店 (重點行冷氣區域)</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=赤峰街" target="_blank">🗺️ 赤峰街地圖</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=誠品生活南西" target="_blank">🗺️ 誠品南西店地圖</a></div>
-        <div class="time-slot"><div class="time">14:30 - 15:30</div><div class="event">🍧 【休息】榕美樹館 (豆花)：直接喺最熱嘅時間入去有冷氣嘅豆花店坐低食，避開室外高溫。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=榕美樹館" target="_blank">🗺️ 榕美樹館地圖</a></div>
-        <div class="time-slot"><div class="time">15:30 - 16:30</div><div class="event">🍢 【外帶】伊良可樂 ＋ 爆汁生煎：食完豆花涼咗啲，去買散步小食，邊行邊返去中山站附近。</div><a class="map-link" href="https://maps.app.goo.gl/NKM4WDt9iSrY5hya9" target="_blank">🗺️ 伊良可樂地圖</a><a class="map-link" href="https://maps.app.goo.gl/Rh6D4bMeGsrwF2NH8" target="_blank">🗺️ 爆汁生煎地圖</a></div>
-        <div class="time-slot"><div class="time">16:30 - 17:30</div><div class="event">🏨 【休息/自由時間】：返酒店放低戰利品。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日野苑" target="_blank">🗺️ 日野苑地圖</a></div>
-        <div class="time-slot" style="margin-top: 15px;"><div class="time">19:30</div><div class="event">🍷 【晚餐】弎樓 (已book;現金only)</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=弎樓ThirdFloor" target="_blank">🗺️ 弎樓地圖</a></div>
-    </div>
-
-    <!-- Day 3 -->
-    <div id="day3" class="card">
-        <h1>賣梁文俊豬仔 Day 3 (7/31・五)<br><small style="font-size: 0.85rem; font-weight: normal; color: #7f8c8d;">大快朵頤 ── A5和牛午餐 ＋ 華山文創 ＋ 悠閒晚餐</small></h1>
-        <div class="time-slot"><div class="time">12:00 - 13:30</div><div class="event">🥩 【午餐大餐】青杉燒肉 (已book)：中午歎最划算嘅 A5和牛 Lunch Set，專人代烤，冷氣房優雅開餐。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=青杉燒肉" target="_blank">🗺️ 青杉燒肉地圖</a></div>
-        <div class="time-slot"><div class="time">14:00 - 16:00</div><div class="event">🎨 【行街/文創】華山1914文創園區：食飽 Uber 直達，專攻室內藝文展覽與設計師小店避暑。</div><a class="map-link" href="https://maps.app.goo.gl/kyLcqbAUkpEMC6PN9" target="_blank">🗺️ 華山1914文創園區地圖</a></div>
-        <div class="time-slot"><div class="time">16:30 - 18:00</div><div class="event">🛍️ 【行街】東區商圈：傍晚較涼爽，於忠孝敦化一帶巷弄、小店及百貨公司漫步。</div><a class="map-link" href="https://maps.app.goo.gl/vG2U9fTiVFeh3iNq8" target="_blank">🗺️ 東區商圈地圖</a></div>
-        <div class="time-slot"><div class="time">18:00 - 19:30</div><div class="event">🏨 【休息/換裝】返回日野苑放低戰利品與休息。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日野苑" target="_blank">🗺️ 日野苑地圖</a></div>
-        <div class="time-slot" style="margin-top: 15px;"><div class="time">19:30 - 21:00</div><div class="event">🍜 【晚餐】小小麥 (台北南西店)：前往中山區享用烏龍麵與各式日式炸物。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=小小麥台北南西店" target="_blank">🗺️ 小小麥 台北南西店地圖</a></div>
-    </div>
-
-    <!-- Day 4 -->
-    <div id="day4" class="card">
-        <h1>賣梁文俊豬仔 Day 4 (8/1・六)<br><small style="font-size: 0.85rem; font-weight: normal; color: #7f8c8d;">文青慢活 ── 老宅下午茶 ＋ 松菸文創 / 大巨蛋 ＋ 頂級火鍋</small></h1>
-        <div class="time-slot"><div class="time">12:00 - 13:00</div><div class="event">🍜 【午餐】地一牛肉麵（環境乾淨舒服，湯頭清爽。若 Day 3 已吃則可改去：麵屋鶴立）。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=地一牛肉麵" target="_blank">🗺️ 地一牛肉麵地圖</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=麵屋鶴立" target="_blank">🗺️ 麵屋鶴立地圖</a></div>
-        <div class="time-slot"><div class="time">13:00 - 16:00</div><div class="event">🏢 【行街/文創】松山文創園區 ＋ 大巨蛋 Garden City：散步逛誠品生活松菸店與全新遠東 Garden City 商場。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=松山文創園區" target="_blank">🗺️ 松山文創園區地圖</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=遠東GardenCity大巨蛋" target="_blank">🗺️ 大巨蛋 Garden City地圖</a></div>
-        <div class="time-slot"><div class="time">16:00 - 17:30</div><div class="event">☕ 【下午茶】貝克宅 忠孝店 (已book)：Uber 前往老宅 Cafe，歎招牌小戚風蛋糕，於二樓榻榻米空間 hea 兩粒鐘。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=貝克宅忠孝店" target="_blank">🗺️ 貝克宅 忠孝店地圖</a></div>
-        <div class="time-slot" style="margin-top: 15px;"><div class="time">19:30 - 21:30</div><div class="event">🍲 【晚餐】麻皇麻辣火鍋 大安區仁愛店 (已book)：享用頂級肉質與海鮮，冷氣夠大，慢慢烚。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=麻皇麻辣火鍋大安區仁愛店" target="_blank">🗺️ 麻皇麻辣火鍋地圖</a></div>
-    </div>
-
-    <!-- Day 5 -->
-    <div id="day5" class="card">
-        <h1>賣完梁文俊豬仔 Day 5 (8/2・日)<br><small style="font-size: 0.85rem; font-weight: normal; color: #7f8c8d;">最後衝刺 ── 米芝蓮台菜 ── 舒舒服服去機場</small></h1>
-        <div class="time-slot"><div class="time">12:30 - 14:00</div><div class="event">🍲 【午餐】雙月食品社 (青島店或濟南店)：米芝蓮必比登推薦，享用招牌燉雞湯與地道油飯。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=雙月食品社青島店" target="_blank">🗺️ 雙月食品社 (青島店) 地圖</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=雙月食品社濟南店" target="_blank">🗺️ 雙月食品社 (濟南店) 地圖</a></div>
-        <div class="time-slot"><div class="time">14:30 - 15:30</div><div class="event">🍩 【排隊】Goodonut：購買人氣美味甜甜圈。</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Goodonut台北" target="_blank">🗺️ Goodonut 地圖</a></div>
-        <div class="time-slot" style="margin-top: 15px;"><div class="time">18:30</div><div class="event">✈️ 【起程返歸】：返回酒店取齊手信行李，叫 UberXL 直奔桃園機場（搭乘 22:00 航班），在機場慢慢 Check-in 並逛免稅店，完美結束行程！</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日野苑" target="_blank">🗺️ 日野苑 (酒店) 地圖</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=台灣桃園國際機場" target="_blank">🗺️ 桃園機場地圖</a></div>
+        <a href="day1.html" class="day-btn">Day 1 (7/29・三) 西門町+行夜市</a>
+        <a href="day2.html" class="day-btn">Day 2 (7/30・四) 中山赤峰街</a>
+        <a href="day3.html" class="day-btn">Day 3 (7/31・五) 燒肉+行華山&東區</a>
+        <a href="day4.html" class="day-btn">Day 4 (8/1・六) 松菸+打邊爐</a>
+        <a href="day5.html" class="day-btn">Day 5 (8/2・日) 捉隻豬仔返屋企</a>
     </div>
 
 </body>
